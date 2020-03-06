@@ -3,7 +3,7 @@
     <div id="tabbar">
 
       <div class="header">
-        <img height="150px" width="800px"  src="../../assets/img/head.jpg">
+        <img height=auto; width="100%"  src="../../assets/img/head.jpg">
       </div>
 
       <div class="body">
@@ -346,10 +346,10 @@
   .header {
     display: block;
     width: 800px;
-    height: 100px;
+   /* height: 100px;
     position: absolute;
     top: 0;
-    background-color: #0A132A;
+    background-color: #0A132A;*/
     /*background-image: url("../../assets/img/head.jpg");*/
   }
 
@@ -379,5 +379,9 @@
     width:800px;
     height: 120px;
     background-color: #0A132A;
+  }
+  .name::before{
+    content: "*";
+    color: #fa7268
   }
 </style>
