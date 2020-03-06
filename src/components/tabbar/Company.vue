@@ -380,7 +380,11 @@
     height: 120px;
     background-color: #0A132A;
   }
-  .name::before{
+  .name::after{
+    content: "*";
+    color: #fa7268
+  }
+  .nameTitle::after{
     content: "*";
     color: #fa7268
   }

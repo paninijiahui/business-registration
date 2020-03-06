@@ -2,11 +2,13 @@
 	<div class="tabs">
 		<div id="tab-bar">
 			<div class="header">
-        <img height="115px" width="800px" src="../../assets/img/head.jpg">
+        <img height=auto width="100%" src="../../assets/img/head.jpg">
 			</div>
+
 			<div class="a1">
+
 				<div>
-					<span class="name">企业注册码</span>
+					<span class="name01">企业注册码</span>
 					<input v-model="message01" style="width:400px;">
 				</div>
 
@@ -32,7 +34,7 @@
 				</div>
 
 				<div>
-					<span class="name">职能职业</span>
+					<span class="name01">职能职业</span>
 					
 					<input v-model="message05" style="width:400px;margin-left: 16px;">
 					<br />
@@ -115,7 +117,7 @@
 				</div>
 
 				<div>
-					<span class="name">语言要求</span>
+					<span class="name01">语言要求</span>
 					
 					<!--<select name="" id="" v-model="trigger" @change="triggerValue">
          <option :value="v.value" v-for="(v,index) in triggerList" v-bind:key="index">{{v.lable}}</option>
@@ -138,7 +140,7 @@
 
 
 				<div>
-					<span class="name">其他要求</span>
+					<span class="name01">其他要求</span>
 					
 					<input v-model="message08" placeholder="如 : 技能、证书、操作系统等。" style="width:400px;margin-left: 16px;">
 				</div>
@@ -284,10 +286,10 @@
 
 
 				<div>
-					<span class="name" style="position: relative;top:-61px;">面试备注 </span>
+					<span class="name01" style="position: relative;top:-61px;">面试备注 </span>
 					<textarea v-model="message12" placeholder="如 : 周一到周五9点到12点可面试，须携带本人身份证" style="text-align: left;width:421px;margin-left: 12px;height:70px;"></textarea>
 					<!-- <span>输入的信息:{{ message }}</span>--><br />
-					<span class="smallFont" style="position: relative;top:-59px;" >面试安排及特别说明事项</span>
+					<span class="smallFont" style="width:170px;color:#66667D;position: relative;top:-59px;" >面试安排及特别说明事项</span>
 										
 				</div>
 
@@ -424,6 +426,11 @@
 		display: inline-block;
 		margin: 16px 86px 0 53px;
 	}
+  .name01 {
+    line-height: 20px;
+    display: inline-block;
+    margin: 16px 86px 0 53px;
+  }
 	.footer01 {
 		display: block;
 		width:800px;
@@ -433,8 +440,8 @@
 	.header {
 		display: block;
 		width:800px;
-		height: 80px;
-		background-color: #0A132A;
+		/*height: 80px;
+		background-color: #0A132A;*/
     /*background-image: url("../../assets/img/head.jpg");*/
 	}
 	#tab-bar {
@@ -493,10 +500,9 @@
     padding-left: 22px;
   }
 
-	/*.a1 {
-   !* flex: 1;*!
-    !*text-align: center;*!
-    height: 568px;
-  }*/
+  .name::after{
+    content: "*";
+    color: #fa7268
+  }
 
 </style>
