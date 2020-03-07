@@ -28,7 +28,7 @@
           </div><br />
         </div>
 
-        <div class="b">
+        <div class="b" style="display:flex">
           <div class="b01">
             <span class="name">2.&nbsp公司招聘业务负责人或法人名片</span> <br />
             <span class="smallFont" style="color:#66667D;position: relative;left:-18px;">必须是 : 企业目前真实在职的招聘负责人或法人名片
@@ -36,7 +36,7 @@
             <span class="smallFont" style="color: #66667D;position: relative;left:-18px;"> 关键信息需清晰可见。 </span><br />
             <span class="smallFont" style="position: relative;left:-18px;">支持jpg,png,gif,bmp,psd,tiff等图片格式</span>
           </div>
-          <div class="b02">
+          <div class="b02" style="position: relative;left:-330px;">
             <ul class="idcard-ul" style="">
               <li v-if="imgs.length>0" v-for='(item ,index ) in imgs' class="iu-item">
                 <img :src="item" class="iul-img">
@@ -52,14 +52,14 @@
           <span class="nameTitle">3. &nbsp &nbsp公司全称 </span>
           <div class="div-bor" style="position: relative;left:300px;top:-22px;">
             <i class="icon-company"></i>
-            <input type="text" v-model="fullname" class="company"  style="width: 400px" placeholder="营业执照上的公司名称" />
+            <input type="text" v-model="fullname" class="company"  style="width: 400px;height:30px" placeholder="营业执照上的公司名称" />
           </div>
         </div> <br />
 
         <div class="infos01">
           <span class="nameTitle">4. &nbsp &nbsp社会信用代码 </span>
           <div class="div-bor" style="position: relative;left:300px;top:-22px;">
-            <input type="number" v-model.number="credit" style="width: 420px" placeholder="营业执照上面的：统一社会信用代码后面的18位数字字母" />
+            <input type="number" v-model.number="credit" style="width: 420px;height:30px" placeholder="营业执照上面的：统一社会信用代码后面的18位数字字母" />
           </div>
         </div> <br />
 
@@ -67,13 +67,13 @@
 
           <div id="infos02">
             <span style="top:-10px" class="nameTitle"> 5. &nbsp &nbsp所在地  </span>
-            <input placeholder="中国" style="top:-10px;width:70px ;position: relative;left:220px" />
-            <select v-model="selected" style="top:-10px;width:70px ;position: relative;left:230px">
+            <input placeholder="中国" style="top:-10px;width:54px ;position: relative;left:205px;height:22px" />
+            <select v-model="selected" style="top:-10px;width:100px ;position: relative;left:212px;height:28.5px">
               <option v-for="yx in YX" :value="yx.text">
                 {{yx.text}}
               </option>
             </select>
-            <select style="top:-10px;width:70px ;position: relative;left:240px">
+            <select style="top:-10px;width:100px ;position: relative;left:220px;height:28.5px">
               <option v-for="zy in selection" :value="zy.text" :selected="$index == 0 ? true : false">
                 {{zy.text}}
               </option>
@@ -82,10 +82,10 @@
         </div> <br />
 
         <div class="infos03">
-          <span class="nameTitle">6. &nbsp &nbsp联系人姓名 </span>
-          <div class="div-bor" style="position: relative;left:300px;top:-22px;">
+          <span class="nameTitle" style="position: relative;top: 8px;">6. &nbsp &nbsp联系人姓名 </span>
+          <div class="div-bor" style="position: relative;left:300px;top:-18px;">
             <i class="icon-name"></i>
-            <input type="text"  v-model="people" class="name"  style="width: 400px" placeholder="请填写真实姓名" />
+            <input type="text"  v-model="people" class="name"  style="width: 400px;height:30px" placeholder=" 请填写真实姓名" />
           </div>
         </div> <br />
 
@@ -93,7 +93,7 @@
           <span class="nameTitle">7. &nbsp &nbsp职位 </span>
           <div class="div-bor" style="position: relative;left:300px;top:-22px;">
             <i class="icon-position"></i>
-            <input type="text" v-model="career" class="position"  style="width: 400px" placeholder="请填写联系人目前真实职位" />
+            <input type="text" v-model="career" class="position"  style="width: 400px;height:30px" placeholder="请填写联系人目前真实职位" />
           </div>
         </div> <br />
 
@@ -101,16 +101,16 @@
           <span class="nameTitle">8. &nbsp &nbsp手机 </span>
           <div class="div-bor" style="position: relative;left:300px;top:-22px;">
             <i class="icon-mobile"></i>
-            <input type="number" v-model.number="num" style="width: 320px" placeholder="      请填写联系人手机号码" />
-            <input placeholder="  获取验证码" style="top:-22px;width:85px ;position: relative;left:340px" />
+            <input type="number" v-model.number="num" style="width: 320px;height:30px" placeholder="      请填写联系人手机号码" />
+            <input placeholder="  获取验证码" style="top:-36px;width:85px ;position: relative;left:340px;height: 30px" />
           </div>
         </div> <br />
 
         <div class="infos06">
-          <span  style="top: -20px" class="nameTitle">9. &nbsp &nbsp接收简历邮箱 </span>
-          <div class="div-bor" style="position: relative;left:300px;top:-42px;">
+          <span  style="top: -45px" class="nameTitle">9. &nbsp &nbsp接收简历邮箱 </span>
+          <div class="div-bor" style="position: relative;left:300px;top:-62px;">
             <i class="icon-email"></i>
-            <input type="text"  v-model="qq" class="email"  style="width: 400px" placeholder="请填写贵公司用户接收简历的邮箱" />
+            <input type="text"  v-model="qq" class="email"  style="width: 400px;height:30px" placeholder=" 请填写贵公司用户接收简历的邮箱" />
           </div>
         </div> <br />
 
@@ -253,7 +253,7 @@
     background-position: 0px 0px;
     width: 20px;
     height: 20px;
-    top: 4px;
+    top: 8px;
     left: 5px;
   }
   .nameTitle {
@@ -274,7 +274,7 @@
     background-position: 0px 0px;
     width: 20px;
     height: 20px;
-    top: 4px;
+    top: 8px;
     left: 5px;
   }
 
@@ -292,7 +292,7 @@
     background-position: 0px 0px;
     width: 20px;
     height: 20px;
-    top: 4px;
+    top: 8px;
     left: 5px;
   }
 
@@ -310,7 +310,7 @@
     background-position: 0px 0px;
     width: 20px;
     height: 20px;
-    top: 4px;
+    top: 8px;
     left: 5px;
   }
 
@@ -328,7 +328,7 @@
     background-position: 0px 0px;
     width: 20px;
     height: 20px;
-    top: 4px;
+    top: 8px;
     left: 5px;
   }
 
@@ -361,7 +361,7 @@
   }
 
   .body {
-    padding: 20px 0;
+    padding: 1px 0;
   }
 
   .body div {
